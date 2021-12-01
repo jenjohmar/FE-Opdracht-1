@@ -42,7 +42,7 @@
         </li>
 
     </ul>
-    <p>Klik <a href="voedingswaarden.html">hier</a> voor de voedingswaarden.</p>
+    <p>Klik <a href="voedingswaarden.html" target="_blank">hier</a> voor de voedingswaarden.</p>
 </section>
 
 <section>
@@ -79,30 +79,36 @@
     <h3>Bedankt voor het lezen van dit recept. Laat ons weten wat je ervan vond.</h3>
 
     <form action="http://www.voorbeeld.nl/review.php">
-        <p>Gegevens</p>
-        <label for="full-name">Naam</label><br>
-        <input type="text" name="full-name" id="full-name"> <br>
-        <label for="email"></label><br>
-        <input type="email" name="email" id="email">
+        <fieldset>
+            <legend>Gegevens</legend>
+            <label for="full-name">Naam:</label>
+            <input type="text" name="full-name" id="full-name"> <br><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Jouw Review</legend>
+            <label for="dropdown-1">Hoe heb je dit recept gevonden?</label>
+            <select name="" id="dropdown-1">
+                <option value="Google">Google</option>
+                <option value="Viavia">Viavia</option>
+                <option value="Reclamefolder">Reclamefolder</option>
+            </select>
 
-        <p>Jouw Review</p>
-        <label for="dropdown-1">Hoe heb je dit recept gevonden?</label>
-        <select name="" id="dropdown-1">
-            <option value="Google">Google</option>
-            <option value="Viavia">Viavia</option>
-            <option value="Reclamefolder">Reclamefolder</option>
-        </select>
-        <p>Zou je dit recept willen uitproberen?</p>
-        <label for="nee">Nee</label>
-        <input type="radio" id="nee">
-        <label for="ja">Ja</label>
-        <input type="radio" id="ja">
-        <label for="misschien">Misschien</label>
-        <input type="radio" id="misschien"><br><br>
-        <label for="opmerkingen">Opmerkingen:</label><br>
-        <textarea name="" id="opmerkingen" cols="50" rows="5">Wat vond je van het recept?</textarea><br>
-        <input checked type="checkbox" id="nieuwsbrief">
-        <label for="nieuwsbrief">Schrijf me in voor de nieuwsbrief:</label>
+            <p>Zou je dit recept willen uitproberen?</p>
+            <label for="nee">Nee</label>
+            <input type="radio" id="nee" value="nee" name="choices">
+            <label for="ja">Ja</label>
+            <input type="radio" id="ja" value="ja" name="choices">
+            <label for="misschien">Misschien</label>
+            <input type="radio" id="misschien" value="misschien" name="choices"><br><br>
+            <label for="opmerkingen">Opmerkingen:</label><br>
+            <textarea id="opmerkingen" cols="50" rows="5">Wat vond je van het recept?</textarea><br>
+            <input checked type="checkbox" id="nieuwsbrief">
+            <label for="nieuwsbrief">Schrijf me in voor de nieuwsbrief</label><br><br>
+            <button>Versturen</button>
+        </fieldset>
     </form>
 
 </footer>
